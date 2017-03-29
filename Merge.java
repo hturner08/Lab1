@@ -1,5 +1,4 @@
 import java.awt.Color;
-
 public class Merge extends Sort {
   private Bar[] temp; // used for extra space
 
@@ -9,6 +8,10 @@ public class Merge extends Sort {
 
   public void drawBars(Bar[] bars) {
     // You write this!
+    StdDraw.clear(Color.BLACK);
+    StdDraw.setPenColor(Color.RED);
+    StdDraw.text(10,10,"Merge Sort");
+    super.drawBars(bars);
   }
 
   public void mergeSort(Bar[] bars) {

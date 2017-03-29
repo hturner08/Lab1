@@ -8,6 +8,10 @@ public class Quick extends Sort {
 
   public void drawBars(Bar[] bars) {
     // It's all on you
+    StdDraw.clear(Color.BLACK);
+    StdDraw.setPenColor(Color.RED);
+    StdDraw.text(10,10,"Quick Sort");
+    super.drawBars(bars);
   }
 
   public void quickSort(Bar[] bars) {
