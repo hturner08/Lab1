@@ -4,6 +4,7 @@
 * Created by: Amanda, Herbie
 * Date: 3/29/17
 */
+import java.awt.Color;
 
 public class Bar implements Comparable<Bar> {
   public int height;
@@ -37,7 +38,7 @@ public class Bar implements Comparable<Bar> {
   }
 
   public String toString() {
-    String s = "(" + height + ", " + width ", " + color + ")";
+    String s = "(" + height + ", " + width + ", " + color + ")";
     return s;
   }
 }
