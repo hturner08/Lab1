@@ -8,6 +8,10 @@ public class Insertion extends Sort {
 
   public void drawBars(ArrayList<Bar> bars) {
     // Write this...
+    StdDraw.clear(Color.BLACK);
+    StdDraw.setPenColor(Color.RED);
+    StdDraw.text(10,10,"Insertion Sort");
+    super.drawBars(bars);
   }
 
   public void insertionSort(ArrayList<Bar> bars) {

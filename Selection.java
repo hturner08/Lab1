@@ -9,6 +9,10 @@ public class Selection extends Sort {
 
   public void drawBars(ArrayList<Bar> bars) {
     // Fill this out!
+    StdDraw.clear(Color.BLACK);
+    StdDraw.setPenColor(Color.RED);
+    StdDraw.text(10,10,"Selection Sort");
+    super.drawBars(bars);
   }
 
   public void selectionSort(ArrayList<Bar> bars) {
