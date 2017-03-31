@@ -18,7 +18,7 @@ public class Merge extends Sort {
   public void drawBars(Bar[] bars) {
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
-    StdDraw.text(200,300,"Merge Sort");
+    StdDraw.text(getCanvasWidth()/2, getCanvasHeight() -50,"Merge Sort");
     super.drawBars(bars);
   }
 
