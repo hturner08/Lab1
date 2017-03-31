@@ -1,5 +1,5 @@
 import java.awt.Color;
-import java.util.List;
+import java.util.*;
 import java.util.ArrayList;
 
 public class Draw{
@@ -25,5 +25,12 @@ public class Draw{
     for(int i = 0; i < numBarsFast;i++){
       bars2[i] = new Bar(2*(i+1),2,Color.RED);
     }
+
+    Insertion test = new Insertion(canvasWidth, canvasHeight, numBarsSlow);
+    Collections.shuffle(bars);
+    test.drawBars(bars);
+    test.insertionSort(bars);
+    test.drawBars(bars);
+
   }
 }

@@ -1,4 +1,11 @@
+/* Project Title: Quick class
+* Description: One of four subclasses under Sort that illustrate how each sort works.
+*
+* Created by: Herbie, Amanda
+* Date: 3/30/17
+*/
 import java.awt.Color;
+import java.util.Arrays;
 
 public class Quick extends Sort {
 
@@ -7,7 +14,6 @@ public class Quick extends Sort {
   }
 
   public void drawBars(Bar[] bars) {
-    // It's all on you
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
     StdDraw.text(10,10,"Quick Sort");

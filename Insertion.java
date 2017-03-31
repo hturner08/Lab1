@@ -1,3 +1,10 @@
+/* Project Title: Insertion class
+* Description: One of four subclasses under Sort that illustrate how each sort works.
+*
+* Created by: Herbie, Amanda
+* Date: 3/30/17
+*/
+
 import java.util.ArrayList;
 import java.awt.Color;
 
@@ -7,7 +14,6 @@ public class Insertion extends Sort {
   }
 
   public void drawBars(ArrayList<Bar> bars) {
-    // Write this...
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
     StdDraw.text(10,10,"Insertion Sort");

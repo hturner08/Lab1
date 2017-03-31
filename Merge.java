@@ -1,4 +1,13 @@
+/* Project Title: Merge class
+* Description: One of four subclasses under Sort that illustrate how each sort works.
+*
+* Created by: Herbie, Amanda
+* Date: 3/30/17
+*/
+
 import java.awt.Color;
+import java.util.Arrays;
+
 public class Merge extends Sort {
   private Bar[] temp; // used for extra space
 
@@ -7,7 +16,6 @@ public class Merge extends Sort {
   }
 
   public void drawBars(Bar[] bars) {
-    // You write this!
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
     StdDraw.text(10,10,"Merge Sort");

@@ -32,24 +32,30 @@ public class Sort {
   }
 
   public void drawBars(ArrayList<Bar> bars) {
+    Bar test = bars.get(0);
+    int totwidth = bars.size() * test.getWidth(); // assuming bars are of the same width
+    int blankdiff = (canvasWidth - totwidth)/bars.size();
     int currx = 0;
     for (Bar b : bars) {
       StdDraw.setPenColor(b.getColor());
-      StdDraw.filledRectangle(currx + b.getWidth()/2, canvasHeight - b.getHeight()/2, b.getWidth()/2, b.getHeight()/2);
+      StdDraw.filledRectangle(currx + b.getWidth()/2, b.getHeight()/2, b.getWidth()/2, b.getHeight()/2);
       StdDraw.show();
-      StdDraw.pause(1000);
-      currx += b.getWidth();
+      StdDraw.pause(100);
+      currx += b.getWidth() + blankdiff;
     }
   }
 
   public void drawBars(Bar[] bars) {
+    Bar test = bars[0];
+    int totwidth = bars.length * test.getWidth(); // assuming bars are of the same width
+    int blankdiff = (canvasWidth - totwidth)/bars.length;
     int currx = 0;
     for (Bar b : bars) {
       StdDraw.setPenColor(b.getColor());
-      StdDraw.filledRectangle(currx + b.getWidth()/2, canvasHeight - b.getHeight()/2, b.getWidth()/2, b.getHeight()/2);
+      StdDraw.filledRectangle(currx + b.getWidth()/2, b.getHeight()/2, b.getWidth()/2, b.getHeight()/2);
       StdDraw.show();
-      StdDraw.pause(1000);
-      currx += b.getWidth();
+      StdDraw.pause(100);
+      currx += b.getWidth() + blankdiff;
     }
   }
 }
