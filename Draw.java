@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Draw{
   public static void main(String[] args) {
@@ -15,5 +17,13 @@ public class Draw{
     StdDraw.setXscale(0, canvasWidth);
     StdDraw.setYscale(0, canvasHeight);
 
+    ArrayList<Bar> bars = new ArrayList<Bar>();
+    for(int i = 0; i < numBarsSlow; i++){
+      bars.add(new Bar(2*(i+1),2,Color.RED));
+    }
+    Bar[] bars2 = new Bar[numBarsFast];
+    for(int i = 0; i < numBarsFast;i++){
+      bars2[i] = new Bar(2*(i+1),2,Color.RED);
+    }
   }
 }
