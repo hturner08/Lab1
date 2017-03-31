@@ -1857,26 +1857,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      */
     public static void main(String[] args) {
 
-        int canvasWidth = 800;
-        int canvasHeight = 400;
-        int numBarsSlow = 50;  // you'll see why you need this later
-        int numBarsFast = 200;  // you'll see why you need this later
-        StdDraw.clear(Color.BLACK);  // sets background to black
-        StdDraw.enableDoubleBuffering(); // turns on animation because we will be animating
 
-        StdDraw.setCanvasSize(canvasWidth, canvasHeight);
-        StdDraw.setPenColor(StdDraw.RED);
-        // sets up window such that (0,0) is lower left hand corner; (canvasWidth, canvasHeight) is upper right hand corner
-        StdDraw.setXscale(0, canvasWidth);
-        StdDraw.setYscale(0, canvasHeight);
-        ArrayList<Bar> test = new ArrayList<Bar>();
-        Bar[] test2 = new Bar[numBarsFast];
-        for(int i = 1; i <= numBarsSlow;i++){
-          test.add(new Bar(i*2,2,Color.RED));
-        }
-        for(int i = 0; i < test2.length;i++){
-          test2[i] = new Bar((i+1)*2,2,Color.RED);
-        }
         StdDraw.square(0.2, 0.8, 0.1);
         StdDraw.filledSquare(0.8, 0.8, 0.2);
         StdDraw.circle(0.8, 0.2, 0.2);
