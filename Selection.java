@@ -17,7 +17,7 @@ public class Selection extends Sort {
   public void drawBars(ArrayList<Bar> bars) {
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
-    StdDraw.text(10,10,"Selection Sort");
+    StdDraw.text(200,300,"Selection Sort");
     super.drawBars(bars);
   }
 

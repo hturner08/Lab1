@@ -16,7 +16,7 @@ public class Insertion extends Sort {
   public void drawBars(ArrayList<Bar> bars) {
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
-    StdDraw.text(10,10,"Insertion Sort");
+    StdDraw.text(200,300,"Insertion Sort");
     super.drawBars(bars);
   }
 

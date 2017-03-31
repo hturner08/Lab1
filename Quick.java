@@ -16,7 +16,7 @@ public class Quick extends Sort {
   public void drawBars(Bar[] bars) {
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
-    StdDraw.text(10,10,"Quick Sort");
+    StdDraw.text(200,300,"Quick Sort");
     super.drawBars(bars);
   }
 
