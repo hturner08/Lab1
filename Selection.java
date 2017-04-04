@@ -23,19 +23,26 @@ public class Selection extends Sort {
 
   public void selectionSort(ArrayList<Bar> bars) {
     for (int i = 0; i < bars.size(); i++) {
-      int first = i;
+      int min = i;
 
       // find min (Blue = current, Green = current min)
       for (int j = i + 1; j < bars.size(); j++) {
-        if (bars.get(j).compareTo(bars.get(first)) < 0) {
-          first = j;
+        if (bars.get(j).compareTo(bars.get(min)) < 0) {
+          min = j;
         }
       }
 
       // swap!
-      Bar temp = bars.get(first);
-      bars.set(first, bars.get(i));
+      Bar temp = bars.get(min);
+      temp.setColor(Color.BLUE);
+      Bar init = bars.get(i);
+      init.setColor(Color.WHITE);
+      bars.set(min, init);
       bars.set(i, temp);
+      drawBars(bars);
+      temp.setColor(Color.RED);
+      init.setColor(Color.RED);
     }
+    drawBars(bars);
   }
 }

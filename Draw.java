@@ -19,18 +19,41 @@ public class Draw{
 
     ArrayList<Bar> bars = new ArrayList<Bar>();
     for(int i = 0; i < numBarsSlow; i++){
-      bars.add(new Bar(2*(i+1),2,Color.RED));
+      bars.add(new Bar(5*(i+5),2,Color.RED));
     }
     Bar[] bars2 = new Bar[numBarsFast];
     for(int i = 0; i < numBarsFast;i++){
-      bars2[i] = new Bar(2*(i+1),2,Color.RED);
+      bars2[i] = new Bar(5*(i+5),2,Color.RED);
     }
 
-    Insertion test = new Insertion(canvasWidth, canvasHeight, numBarsSlow);
+    // Insertion sorter
+    Insertion test0 = new Insertion(canvasWidth, canvasHeight, numBarsSlow);
     Collections.shuffle(bars);
-    test.drawBars(bars);
-    test.insertionSort(bars);
-    test.drawBars(bars);
+    test0.drawBars(bars);
+    test0.insertionSort(bars);
 
+    StdDraw.pause(1000);
+
+    // Selection sorter
+    Selection test1 = new Selection(canvasWidth, canvasHeight, numBarsSlow);
+    Collections.shuffle(bars);
+    test1.drawBars(bars);
+    test1.selectionSort(bars);
+
+    StdDraw.pause(1000);
+
+    // // Merge sorter
+    // Merge test2 = new Merge(canvasWidth, canvasHeight, numBarsSlow);
+    // Collections.shuffle(bars2);
+    // test2.drawBars(bars2);
+    // test2.mergeSort(bars2);
+    //
+    // StdDraw.pause(1000);
+    //
+    // // Quick sorter
+    // Quick test3 = new Quick(canvasWidth, canvasHeight, numBarsSlow);
+    // Collections.shuffle(bars2);
+    // test3.drawBars(bars2);
+    // test3.quickSort(bars2);
   }
 }

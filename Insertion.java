@@ -21,9 +21,11 @@ public class Insertion extends Sort {
   }
 
   public void insertionSort(ArrayList<Bar> bars) {
+
     for (int i = 1; i < bars.size(); i++) {
       // save next element to be inserted
       Bar temp = bars.get(i);
+      temp.setColor(Color.BLUE);
 
       // go back from bars.get(n-1), find insertion spot
       // bars.get(i) <= temp
@@ -31,12 +33,20 @@ public class Insertion extends Sort {
       while (count > 0 && temp.compareTo(bars.get(count - 1)) < 0) {
         count--;
       }
+      Bar b = bars.get(bars.size()-1);
 
       // shift elements from i to count
       for (int j = i; j > count; j--) {
+        b = bars.get(j-1);
+        // b.setColor(Color.BLUE);
         bars.set(j, bars.get(j-1));
       }
+      // temp.setColor(Color.GREEN);
       bars.set(count, temp);
+      drawBars(bars);
+      temp.setColor(Color.RED);
     }
+    StdDraw.pause(100);
+    drawBars(bars);
   }
 }
