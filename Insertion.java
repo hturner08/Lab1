@@ -8,15 +8,19 @@
 import java.util.ArrayList;
 import java.awt.Color;
 
+
 public class Insertion extends Sort {
+  private int computations;
   public Insertion(int w, int h, int n) {
     super(w, h, n);
+    computations = 0;
   }
 
   public void drawBars(ArrayList<Bar> bars) {
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
     StdDraw.text(getCanvasWidth()/2, getCanvasHeight() -50,"Insertion Sort");
+    StdDraw.text(getCanvasWidth()/2, getCanvasHeight() -100,"Computations made:" + computations);
     super.drawBars(bars);
   }
 
@@ -32,6 +36,7 @@ public class Insertion extends Sort {
       int count = i;
       while (count > 0 && temp.compareTo(bars.get(count - 1)) < 0) {
         count--;
+        computations++;
       }
       Bar b = bars.get(bars.size()-1);
 
@@ -47,6 +52,8 @@ public class Insertion extends Sort {
       temp.setColor(Color.RED);
     }
     StdDraw.pause(100);
+    for(int i = 0; i < bars.size(); i++)
+      bars.get(i).setColor(Color.WHITE);
     drawBars(bars);
   }
 }

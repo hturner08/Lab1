@@ -9,15 +9,17 @@ import java.util.ArrayList;
 import java.awt.Color;
 
 public class Selection extends Sort {
-
+  private int computations;
   public Selection(int w, int h, int n) {
     super(w, h, n);
+    computations = 0;
   }
 
   public void drawBars(ArrayList<Bar> bars) {
     StdDraw.clear(Color.BLACK);
     StdDraw.setPenColor(Color.RED);
     StdDraw.text(getCanvasWidth()/2, getCanvasHeight() -50,"Selection Sort");
+    StdDraw.text(getCanvasWidth()/2, getCanvasHeight() -100,"Computations made:" + computations);
     super.drawBars(bars);
   }
 
@@ -27,6 +29,7 @@ public class Selection extends Sort {
 
       // find min (Blue = current, Green = current min)
       for (int j = i + 1; j < bars.size(); j++) {
+        computations++;
         if (bars.get(j).compareTo(bars.get(min)) < 0) {
           min = j;
         }
@@ -43,6 +46,8 @@ public class Selection extends Sort {
       temp.setColor(Color.RED);
       init.setColor(Color.RED);
     }
+    for(int i = 0; i < bars.size(); i++)
+      bars.get(i).setColor(Color.WHITE);
     drawBars(bars);
   }
 }

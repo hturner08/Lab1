@@ -54,7 +54,7 @@ public class Sort {
       StdDraw.setPenColor(b.getColor());
       StdDraw.filledRectangle(currx + b.getWidth()/2, b.getHeight()/2, b.getWidth()/2, b.getHeight()/2);
       StdDraw.show();
-      StdDraw.pause(100);
+      StdDraw.pause(3);
       currx += b.getWidth() + blankdiff;
     }
   }
