@@ -1,4 +1,6 @@
-### Lab 1
+## Lab 1
+#### Herbie and Amanda
+
 **Purpose:**
 The purpose of this lab was to graphically explain the sorting methods of Insertion sort,
 Selection sort, Merge sort, and Quick sort. Not only can you see the sort represented

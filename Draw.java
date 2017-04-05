@@ -1,3 +1,11 @@
+/* Project Title: Draw class
+* Description: This is the class used to run the program on terminal. It contains
+* the main method that runs insertion, selection, merge, and quick sort, in that order.
+*
+* Created by: Amanda, Herbie
+* Date: 4/4/17
+*/
+
 import java.awt.Color;
 import java.util.*;
 import java.util.ArrayList;

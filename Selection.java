@@ -1,7 +1,7 @@
 /* Project Title: Selection class
 * Description: One of four subclasses under Sort that illustrate how each sort works.
 *
-* Created by: Herbie, Amanda
+* Created by: Amanda, Herbie
 * Date: 3/30/17
 */
 
