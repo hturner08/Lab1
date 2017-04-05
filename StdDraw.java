@@ -21,7 +21,7 @@
  *       images and strings
  *
  ******************************************************************************/
-
+import java.awt.Color;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.FileDialog;
@@ -70,6 +70,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
+import java.util.ArrayList;
+import java.util.List;
 /**
  *  The {@code StdDraw} class provides a basic capability for
  *  creating drawings with your programs. It uses a simple graphics model that
@@ -1854,6 +1856,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
+
+
         StdDraw.square(0.2, 0.8, 0.1);
         StdDraw.filledSquare(0.8, 0.8, 0.2);
         StdDraw.circle(0.8, 0.2, 0.2);
